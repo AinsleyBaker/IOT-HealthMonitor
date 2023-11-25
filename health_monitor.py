@@ -61,8 +61,8 @@ def get_bpm():
 # Function to send messages to phone using twilio
 def send_message(message):
     try:
-        client.messages.create(body="ENG103 <<Ainsley Baker, Ebony Wallace, Ben Blackwood>>" + message,
-                                from_='+12512201853', to="+61476463507")
+        client.messages.create(body="Health Alert: " + message,
+                                from_='sending phone', to="receiving phone")
     except Exception as e:
         print("An error has occured:", e)
 
